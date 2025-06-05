@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WorkBox</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+  <div class="nav-left">
+    <img src="images/workbox-logo-nobg.png" alt="WorkBox Logo" class="logo-img" />
+    <span class="logo-text">WorkBox</span>
+  </div>
+
+  <div class="nav-right">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">Возможности</a></li>
+        <li><a href="#">Как это работает</a></li>
+        <li><a href="#">Корпоративные решения</a></li>
+        <li><a href="#" class="app-button" style="color: rgb(255, 255, 255);">Франшиза</a>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+      </ul>
+      </div>
+</header>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Рабочее пространство там, где вы</h1>
+    <p>
+      Поминутная аренда комфортных кабинок для работы и отдыха. <br>
+      Доступно в любое время через мобильное приложение.
+    </p>
+    <div class="hero-buttons">
+      <div class="download-buttons">
+        <a href="#" onclick="openModal()" class="store-button">
+          <img src="images/appstore.svg" alt="Скачать в App Store" />
+        </a>
+        <a href="#" onclick="openModal()" class="store-button">
+          <img src="images/googleplay.svg" alt="Скачать в Google Play" />
+        </a>
+        <a href="#" onclick="openModal()" class="store-button">
+          <img src="images/logo-color-dark.png" alt="Загрузить в RuStore" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="images/kabina-nobg.png" alt="Кабинка" class="kabina" />
+  </div>
+<!-- ✅ Модальное окно — вне секции hero -->
+<div id="appModal" class="modal-overlay" role="dialog" aria-modal="true">
+  <div class="modal-content">
+    <img src="images/smile.png" alt="Смайлик" class="modal-icon" />
+    <div class="modal-text">
+      <p><strong>Мобильное приложение проходит внутреннее тестирование.</strong></p>
+      <p>Скоро будет доступно для загрузки.</p>
+      <p>Узнать о готовности к загрузке и других новостях проекта Вы можете, подписавшись на наш телеграм-канал:</p>
+      <a href="https://t.me/wrkbox" target="_blank" class="telegram-link">t.me/wrkbox</a>
+    </div>
+    <button class="close-btn" onclick="closeModal()">×</button>
+  </div>
+</div>
+
+ <!-- ✅ Скрипт — в самом конце перед </body> -->
+ <script>
+  function openModal() {
+    document.getElementById('appModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('appModal').style.display = 'none';
+  }
+
+  window.addEventListener('click', function (e) {
+    const modal = document.getElementById('appModal');
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+ </script>
+ </section>
+ <section class="how-it-works">
+  <div class="container">
+    <h2>Как это работает</h2>
+    <p class="subtitle">Аренда WorkBox — это просто и удобно</p>
+
+    <div class="steps">
+      <div class="step">
+        <img src="images/download.png" alt="Скачать приложение" />
+        <h3>1. Скачайте приложение</h3>
+        <p>Установите наше мобильное приложение WorkBox на свой телефон, котрое доступно в трех популярных макетплейсах для скачивания. Зарегистрируйтесь в приложении. </p>
+      </div>
+      <div class="step">
+        <img src="images/map.png" alt="Найдите WorkBox" />
+        <h3>2. Найдите ближайший WorkBox</h3>
+        <p>Приложение покажет ближайшую к Вам доступную кабинку. Для удобства реализована навигация на выбор, Яндекс Навигатор, Заказ Яндекс GO или найти ближайший самокат чтобы добраться до кабинки</p>
+      </div>
+      <div class="step">
+        <img src="images/clok.png" alt="Арендуйте" />
+        <h3>3. Арендуйте предварительно</h3>
+        <p>Вы можете забронировать WorkBox предварительно за 30 минут. После бронирования направляйтесь к кабинке. Внесите данные Вашей платежной карты и получите доступ.</p>
+      </div>
+    </div>
+
+    <div class="app-info">
+      <img src="images/mobile (2).png" alt="Мобильное приложение" />
+      <div class="app-text">
+        <h3>Удобное мобильное приложение</h3>
+        <ul>
+          <li>Поиск ближайших кабинок на карте</li>
+          <li>Быстрая оплата и бронирование</li>
+          <li>Управление временем аренды</li>
+          <li>Программа лояльности и бонусы</li>
+          <li>Аренда нескольких кабинок одновременно</li>
+          <li>Подписка для компаний</li>
+          <li>Полностью автоматизированная система контроля доступа</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
